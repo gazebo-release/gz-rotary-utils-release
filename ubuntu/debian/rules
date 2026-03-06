@@ -1,0 +1,37 @@
+#!/usr/bin/make -f
+
+DEB_HOST_ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
+
+.PHONY: override_dh_auto_configure \
+        override_dh_install \
+        override_dh_auto_test
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	    -DCMAKE_BUILD_TYPE=RelWithDebInfo
+
+override_dh_install:
+	dh_install
+	# remove duplicate cli files from utilsx-dev.install regexp
+	cd debian/libgz-utils-cli-dev; find . -type f -exec rm -f ../libgz-utils-dev/{} \;
+	find debian/libgz-utils-dev -type d -empty -delete
+
+override_dh_auto_test:
+ifeq ($(DEB_HOST_ARCH),armhf)
+	true
+else
+	dh_auto_test $@ --no-parallel --buildsystem=cmake
+endif
+
+# Execute doc creation to export at least the doxygen tag file
+override_dh_auto_build:
+	dh_auto_build -- doc
+	dh_auto_build
+
+override_dh_auto_install:
+	dh_auto_install
+	install -d debian/tmp/usr/share/gz/gz-utils/
+	install ./obj-*/*.tag.xml debian/tmp/usr/share/gz/gz-utils/

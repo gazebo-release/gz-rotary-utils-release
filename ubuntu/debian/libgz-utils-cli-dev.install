@@ -1,0 +1,4 @@
+usr/include/*/*/*/utils/cli/*
+usr/include/*/*/*/utils/cli.hh
+usr/lib/*/pkgconfig/*-utils-cli.pc
+usr/lib/*/cmake/*-utils-cli/*

@@ -1,0 +1,9 @@
+usr/include/*/utils*/gz/utils/detail/*.hh
+usr/include/*/utils*/gz/utils/detail/*.h
+usr/include/*/utils*/*/utils.hh
+usr/include/*/utils*/*/utils/*.hh
+usr/lib/*/pkgconfig/*-utils.pc
+usr/lib/*/cmake/*-utils/*-utils*
+usr/lib/*/cmake/*-utils-all/*-utils*
+usr/lib/*/lib*-utils.so
+usr/share/gz/*/*

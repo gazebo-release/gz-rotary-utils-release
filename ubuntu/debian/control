@@ -72,7 +72,7 @@ Replaces: libgz-utils1-log, libgz-utils2-log, libgz-utils3-log, libgz-utils4-log
 Multi-Arch: same
 Description: Gazebo Utils Library - Log shared library
 
-Package: gz-rotary-utils
+Package: libgz-rotary-utils-dev
 Depends: libgz-utils-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -80,7 +80,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-utils-cli
+Package: libgz-rotary-utils-cli-dev
 Depends: libgz-utils-cli-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -88,7 +88,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-utils-log
+Package: libgz-rotary-utils-log-dev
 Depends: libgz-utils-log-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional

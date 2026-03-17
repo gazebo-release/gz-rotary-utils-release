@@ -73,14 +73,6 @@ Multi-Arch: same
 Description: Gazebo Utils Library - Log shared library
 
 Package: gz-rotary-utils
-Depends: libgz-utils (= ${binary:Version}), ${misc:Depends}
-Architecture: all
-Priority: optional
-Section: metapackages
-Description: alias package
- Provides a package for Rotary without exposing the version number.
-
-Package: gz-rotary-utils
 Depends: libgz-utils-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional

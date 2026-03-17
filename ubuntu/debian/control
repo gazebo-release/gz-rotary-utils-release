@@ -80,7 +80,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-utils-dev
+Package: gz-rotary-utils
 Depends: libgz-utils-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -88,7 +88,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-utils-cli-dev
+Package: gz-rotary-utils-cli
 Depends: libgz-utils-cli-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -96,7 +96,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-utils-log-dev
+Package: gz-rotary-utils-log
 Depends: libgz-utils-log-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -104,10 +104,3 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-utils-log
-Depends: libgz-utils-log (= ${binary:Version}), ${misc:Depends}
-Architecture: all
-Priority: optional
-Section: metapackages
-Description: alias package
- Provides a package for Rotary without exposing the version number.
